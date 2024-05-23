@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activity Log</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <style>                
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F2FAFA;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Activity Log</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Entity Type</th>
+                    <th>Entity ID</th>
+                    <th>Action</th>
+                    <th>Timestamp</th>
+                    <th>Details</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for action in actions %}
+                <tr>
+                    <td>{{ action.id }}</td>
+                    <td>{{ action.entity_type }}</td>
+                    <td>{{ action.entity_id }}</td>
+                    <td>{{ action.action }}</td>
+                    <td>{{ action.timestamp }}</td>
+                    <td>{{ action.details }}</td>
+                    <td>
+                        <form method="post" action="{{ url_for('delete_action', action_id=action.id) }}" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="text-right">
+            <a href="/sagout" class="btn btn-primary">Logout</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog, Events, and News</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F2FAFA;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        h1:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background-color: #2980b9;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #2980b9;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover:before {
+            transform: translateX(0);
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        .section-content {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .section.active .section-content {
+            display: block;
+        }
+        
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        .link {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .link:hover {
+            color: #3498db;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blog, Events, and News</h1>
+
+        <div class="section" id="blog-section">
+            <h2>Blog Posts</h2>
+            <div class="section-content">
+                <ul>
+                    {% for post in blog_posts %}
+                        <li>{{ post.title }} - {{ post.content }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="events-section">
+            <h2>Events</h2>
+            <div class="section-content">
+                <ul>
+                    {% for event in events %}
+                        <li>
+                            <div>{{ event.title }} - {{ event.description }} - {{ event.date }} - {{ event.location }}</div>
+                            {% if event.image_path %}
+                                <img src="{{ url_for('static', filename=event.image_path) }}" alt="Event Image" class="image">
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="section" id="news-section">
+            <h2>News Articles</h2>
+            <div class="section-content">
+                <ul>
+                    {% for article in news_articles %}
+                        <li>
+                            <div>{{ article.title }} - {{ article.content }} - {{ article.published_date }}</div>
+                            {% if article.image_path %}
+                                <img src="{{ url_for('static', filename=article.image_path) }}" alt="Article Image" class="image">
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSectionContent(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.section').forEach(section => {
+            section.addEventListener('click', () => {
+                toggleSectionContent(section.id);
+            });
+        });
+    </script>
+</body>
+</html>

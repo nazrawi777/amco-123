@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-default {
+            background-color: #11474D;
+            border-color: #11474D;
+        }
+        .navbar-default .navbar-brand {
+            color: white;
+        }
+        .navbar-default .navbar-nav>li>a {
+            color: white;
+        }
+        .navbar-default .navbar-nav>li>a:hover,
+        .navbar-default .navbar-nav>li>a:focus {
+            background-color: #0A2C2F;
+            color: white;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            color: #11474D;
+            margin-top: 0;
+        }
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .card li {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .card a {
+            color: #11474D;
+            text-decoration: none;
+        }
+        .card a:hover {
+            color: #0A2C2F;
+        }
+        .navbar-right {
+            margin-right: 20px;
+        }
+        .navbar-right a {
+            color: white;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h1 style="color:white">Admin Panel</h1>
+            </div>
+            <div class="navbar-right">
+                <!-- Remove the empty <a> tag -->
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h2>Blog Management</h2>
+            <ul>
+                <li><a href="{{ url_for('create_blog_post') }}">Create Blog Post</a></li>
+                {% for post in blog_posts %}
+                    <li>
+                        {{ post.title }} - 
+                        <a href="{{ url_for('edit_blog_post', id=post['id']) }}">Edit</a> | 
+                        <a href="{{ url_for('delete_blog_post', id=post['id']) }}">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="card">
+            <h2>Events Management</h2>
+            <ul>
+                <li><a href="{{ url_for('create_event') }}">Create Event</a></li>
+                {% for event in events %}
+                    <li>
+                        {{ event.title }} - 
+                        <a href="{{ url_for('edit_event', id=event['id']) }}">Edit</a> | 
+                        <a href="{{ url_for('delete_event', id=event['id']) }}">Delete</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
