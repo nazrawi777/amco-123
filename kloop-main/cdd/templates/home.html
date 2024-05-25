@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <link rel="icon" type="image/png" href="/static/images/amco-logo-page0001removebgpreview-1-2@2x.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -52,11 +52,11 @@
   </header>
   
    <!--call button-->
-   <a href="https://www.instagram.com/">
-    <div class="call"> 
+   <a href="tel:+1234567890">
+    <div class="call">
       <h2>Call Us</h2>
       <div class="phone">
-        <img src="/static/images/call.png">
+        <img src="/static/images/call.png" alt="Call Icon">
       </div>
       <div class="circle1"></div>
       <div class="circle2"></div>
@@ -87,6 +87,13 @@
               <h1>Craftsmanship</h1>
             <p>AMCO is Ethiopia's Leading Construction, Interior
             <br/>Design, and Furniture Brand</p>
+            <div>
+              <a href="tel:+1234567890" class="ct-link">
+                <span class="ct">
+                  <h2>Explore</h2>
+                </span>
+              </a>
+          </div>
           </div>
           <img src="/static/images/photo_2024-05-22_10-14-40.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
         </div>
@@ -97,6 +104,11 @@
               <h1>Craftsmanship</h1>
             <p>AMCO is Ethiopia's Leading Construction, Interior
             <br/>Design, and Furniture Brand</p>
+            <a href="tel:+1234567890" class="ct-link">
+              <span class="ct">
+                <h2>Explore</h2>
+              </span>
+            </a>
           </div>
           <img src="/static/images/photo_2024-05-22_10-14-36.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
         </div>
@@ -107,24 +119,17 @@
               <h1>Craftsmanship</h1>
             <p>AMCO is Ethiopia's Leading Construction, Interior
             <br/>Design, and Furniture Brand</p>
+            <a href="tel:+1234567890" class="ct-link">
+              <span class="ct">
+                <h2>Explore</h2>
+              </span>
+            </a>
           </div>
           <img src="/static/images/photo_2024-05-22_10-14-32.jpg" class="zoom-animation" style="width: 100%; height: 100%;">
         </div>
         
        
-        <!-- /fade css -->
-        
-        <!-- onclick js -->
- 
-        
-        <!--<div class="dotsbox" style="text-align:center">
-          <span class="dot10" onclick="currentSlide(1)"></span>
-          <span class="dot10" onclick="currentSlide(2)"></span>
-          <span class="dot10" onclick="currentSlide(3)"></span>
-          <span class="dot10" onclick="currentSlide(4)"></span>
-          <span class="dot10" onclick="currentSlide(5)"></span>
-        </div>-->
-        <!-- /onclick js -->
+        </div>
          </section>
    
     
@@ -264,23 +269,24 @@
             
             <div class="slides2">
               <div class="slide1">
-                <video src="/static/images/Adulian_Advert_full_interior_design_and_work_from_Amco_wN4TvnFtcBs.mp4" controls></video>
+                <video id="video1" src="/static/images/Adulian_Advert_full_interior_design_and_work_from_Amco_wN4TvnFtcBs.mp4" controls autoplay muted loop playsinline></video>
+                
               </div>
               <div class="slide1">
-                <video src="/static/images/Adulian_Advert_full_interior_design_and_work_from_Amco_wN4TvnFtcBs.mp4" controls></video>
+                <video id="video2" src="/static/images/Adulian_Advert_full_interior_design_and_work_from_Amco_wN4TvnFtcBs.mp4" controls autoplay muted loop playsinline></video>
+                <button onclick="togglePlayPause('video2')">Play/Pause</button>
               </div>
             </div>
           
-            <!-- Navigation dots -->
+            <!-- Navigation dots 
             <div class="custom-dots1">
               <label for="dot1"></label>
-              <label for="dot2"></label>
-              <label for="dot3"></label>
-              <label for="dot4"></label>
               <label for="dot5"></label>
             </div>
+            -->
           </div>
           </div>
+
 
       <div class="servv">
         <div class="image-co1umn20">
@@ -391,22 +397,11 @@
                 <div class="slide21">
                   <iframe src="https://www.youtube.com/embed/IuxOlxYyvkA" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="slide21">
-                  <iframe src="https://www.youtube.com/embed/tVvgP3gz_U8" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="slide21">
-                  <iframe src="https://www.youtube.com/embed/tVvgP3gz_U8" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                
               </div>
             
               <!-- Navigation dots -->
-              <div class="custom-dots11">
-                <label for="dot1"></label>
-                <label for="dot2"></label>
-                <label for="dot3"></label>
-                <label for="dot4"></label>
-                <label for="dot5"></label>
-              </div>
+              
             </div>
             
           
@@ -467,24 +462,24 @@
    </section>
     </div>
   </div>
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="row">
         <div class="footer-col">
           <h4>company</h4>
           <ul>
-            <li><a href="#about">about us</a></li>
-            <li><a href="#service">our services</a></li>
-            <li><a href="product.html">produts</a></li>
-            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="/about">about us</a></li>
+            <li><a href="/">our services</a></li>
+            <li><a href="/prod">produts</a></li>
+            <li><a href="/">portfolio</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Amco</h4>
           <ul>
-            <li><a href="product.html">Our furniture </a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="blog.html">News</a></li>
+            <li><a href="/prod">Our furniture </a></li>
+            <li><a href="/c">Blog</a></li>
+            <li><a href="c.html">News</a></li>
             <li><a href="blog.html">Event</a></li>
             
           </ul>
@@ -818,7 +813,7 @@
         }
     
         function startAutoPlay() {
-            intervalId = setInterval(nextSlide, 3000);
+            intervalId = setInterval(nextSlide, 500);
         }
     
         function stopAutoPlay() {
@@ -846,7 +841,7 @@
   let counter = 1;
   slidefun(counter);
   
-  let timer = setInterval(autoSlide, 8000);
+  let timer = setInterval(autoSlide, 3000);
   function autoSlide() {
       counter += 1;
       slidefun(counter);
@@ -958,7 +953,17 @@
     autoWriteLine(lines[0]);
   });
   
-  
+  document.addEventListener('DOMContentLoaded', (event) => {
+  const videos = document.querySelectorAll('video');
+  videos.forEach(video => {
+    video.play().catch(error => {
+      console.error('Autoplay prevented:', error);
+      video.muted = true;
+      video.play();
+    });
+  });
+});
+
   
   document.addEventListener('DOMContentLoaded', (event) => {
     let items = document.querySelectorAll('.carousel-container .carousel-list .carousel-item');
@@ -1024,6 +1029,14 @@
         nextBtn.click();
     }, 5000);
   });
+  function togglePlayPause(videoId) {
+  var video = document.getElementById(videoId);
+  if (video.paused || video.ended) {
+    video.play();
+  } else {
+    video.pause();
+  }
+}
 </script>
 
   </body>

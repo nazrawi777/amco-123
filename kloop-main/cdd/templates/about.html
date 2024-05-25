@@ -18,7 +18,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
             background-color: white;
         }
         
@@ -31,6 +30,452 @@
         /*nini*/
         /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*call us*/
+a{
+  text-decoration: none;
+}
+
+/*change2*/
+.call {
+  max-width: 120px;
+  height: 40px;
+  background: #ffffff;
+  position: relative;
+  right: -1200px;
+  bottom: 74px;
+  border-radius: 25px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 30;
+}
+
+.call h2 {
+  position: relative;
+  font-size: 14px;
+  left: 52px;
+  bottom: -7.7px;
+  color: lightgreen;
+}
+
+.circle1,
+.circle2 {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  animation: animate1 2.5s linear infinite;
+}
+
+.circle2 {
+  animation: animate2 2.5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+.phone {
+  width: 60px;
+  height: 44px;
+  position: absolute;
+  z-index: 5;
+}
+
+.phone img {
+  width: 80%;
+}
+
+@media (min-width: 501px) and (max-width: 819px) {
+  /*change2*/
+  nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+    position: relative;
+    left: -10px;
+    font-family: poppins, sans-serif;
+  }
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    position: relative;
+    right: -320px;
+    bottom: 74px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  
+  .call h2 {
+    position: relative;
+    font-size: 14px;
+    left: 46px;
+    bottom: -8.3px;
+    color: lightgreen;
+  }
+  
+  .circle1,
+  .circle2 {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .circle1 {
+    animation: animate1 2.5s linear infinite;
+  }
+  
+  .circle2 {
+    animation: animate2 2.5s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% {
+      width: 25px;
+      height: 25px;
+      background-color: rgb(36, 167, 64);
+      top: 10px;
+      left: 7px;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(134, 78, 13, 0);
+      top: -2px;
+      left: 5px;
+    }
+  }
+  
+  @keyframes animate2 {
+    0% {
+      width: 25px;
+      height: 25px;
+      background-color: rgb(36, 167, 64);
+      top: 10px;
+      left: 7px;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(134, 78, 13, 0);
+      top: -2px;
+      left: 5px;
+    }
+  }
+  
+  .phone {
+    width: 60px;
+    height: 44px;
+    position: absolute;
+    z-index: 5;
+  }
+  
+  .phone img {
+    width: 80%;
+  }
+  }
+
+  @media (min-width: 360px) and (max-width: 501px) {
+    /*change2*/
+    nav ul li a{
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 12px;
+      position: relative;
+      left: -10px;
+      font-family: poppins, sans-serif;
+    }
+    .call {
+      width: 110px;
+      height: 41px;
+      background: #ffffff;
+      position: relative;
+      right: -140px;
+      bottom: 64px;
+      border-radius: 25px;
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      cursor: pointer;
+      text-decoration: none;
+      z-index: 60;
+    }
+    
+    .call h2 {
+      position: relative;
+      font-size: 14px;
+      left: 48px;
+      bottom: -8.3px;
+      color: lightgreen;
+    }
+    
+    .circle1,
+    .circle2 {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      position: absolute;
+    }
+    
+    .circle1 {
+      animation: animate1 2.5s linear infinite;
+    }
+    
+    .circle2 {
+      animation: animate2 2.5s linear infinite;
+    }
+    
+    @keyframes animate1 {
+      0% {
+        width: 25px;
+        height: 25px;
+        background-color: rgb(36, 167, 64);
+        top: 10px;
+        left: 7px;
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(134, 78, 13, 0);
+        top: -2px;
+        left: 5px;
+      }
+    }
+    
+    @keyframes animate2 {
+      0% {
+        width: 25px;
+        height: 25px;
+        background-color: rgb(36, 167, 64);
+        top: 10px;
+        left: 7px;
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(134, 78, 13, 0);
+        top: -2px;
+        left: 5px;
+      }
+    }
+    
+    .phone {
+      width: 60px;
+      height: 44px;
+      position: absolute;
+      z-index: 5;
+    }
+    
+    .phone img {
+      width: 80%;
+    }
+    }
+
+
+
+@media (min-width: 820px) and (max-width: 930px) {
+/*change2*/
+.call {
+  width: 110px;
+  height: 41px;
+  background: #ffffff;
+  position: relative;
+  right: -690px;
+  bottom: 74px;
+  border-radius: 25px;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 60;
+}
+
+.call h2 {
+  position: relative;
+  font-size: 16px;
+  left: 42px;
+  bottom: -6.3px;
+  color: lightgreen;
+}
+
+.circle1,
+.circle2 {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  animation: animate1 2.5s linear infinite;
+}
+
+.circle2 {
+  animation: animate2 2.5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+.phone {
+  width: 60px;
+  height: 44px;
+  position: absolute;
+  z-index: 5;
+}
+
+.phone img {
+  width: 80%;
+}
+}
+@media (min-width: 931px) and (max-width: 1048px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    position: relative;
+    right: -795px;
+    bottom: 74px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+}
+@media (min-width: 1048px) and (max-width: 1155px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    position: relative;
+    right: -905px;
+    bottom: 74px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+}
+
+
+@media (min-width: 1156px) and (max-width: 1399px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    position: relative;
+    right: -1100px;
+    bottom: 64px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+}
+@media (max-width: 374){
+
+  .call {
+    width: 80px;
+    height: 43px;
+    background: #ffffff;
+    position: relative;
+    right: -20px;
+    bottom: 34px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  
+}
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -332,7 +777,7 @@ img {
         font-size: 12px;
     }
 }
-@media (min-width: 360px) and (max-width: 553px) {
+@media (min-width: 360px) and (max-width: 430px) {
     .abtus {
         padding: 0rem;
         position: relative;
@@ -344,7 +789,22 @@ img {
         font-size: 20px;
     }
     .abtus p{
-        font-size: 6.6px;
+        font-size: 6.2px;
+    }
+} 
+@media (min-width: 421px) and (max-width: 554px) {
+    .abtus {
+        padding: 0rem;
+        position: relative;
+        bottom: 200px;
+        width: 90%;
+        line-height: 1;
+    }
+    .abtus h1{
+        font-size: 20px;
+    }
+    .abtus p{
+        font-size: 7.3px;
     }
 } 
 
@@ -381,7 +841,7 @@ img {
   padding: 10px 30px;
   position: relative;
   width: 40%;
-  animation: movedown 1s linear forwards;
+  animation: movedown 1.5s linear forwards;
   opacity: 0;
   
 }
@@ -396,22 +856,22 @@ img {
   }
 }
 .container999:nth-child(1){
-  animation-delay: 2s;
+  animation-delay: 2.5s;
 }
 .container999:nth-child(2){
-  animation-delay: 3s;
+  animation-delay: 3.5s;
 }
 .container999:nth-child(3){
-  animation-delay: 4s;
+  animation-delay: 4.5s;
 }
 .container999:nth-child(4){
-  animation-delay: 5s;
+  animation-delay: 5.5s;
 }
 .container999:nth-child(5){
-  animation-delay: 6s;
+  animation-delay: 6.5s;
 }
 .container999:nth-child(6){
-  animation-delay: 7s;
+  animation-delay: 7.5s;
 }
 .text-box{
   transition: box-shadow 0.5s;
@@ -631,12 +1091,12 @@ img {
           </a>
           <div class="dropdown-content">
               <a id="about" href="/about">About Us</a>
-              <a  href="#portfolio">Portfolio</a>
+              <a id="home" href="/">Portfolio</a>
           </div>
       </li>
-      <li><a href="#service">Service</a></li>
-      <li><a id="products" href="/prod">Products</a></li>
-      <li><a  href="#contact">Contact</a></li>
+      <li><a id="home" href="/">Service</a></li>
+      <li><a id="home" href="/prod">Products</a></li>
+      <li><a id="home" href="/">Contact</a></li>
       <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
       <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
   </ul>
@@ -662,11 +1122,11 @@ img {
 <div class="social-widget">
   <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
   <a href="#" class="social-icon " data-social="Instagram"><i class="fab fa-instagram"></i><span class="social-name">Instagram</span></a>
-  <a href="#" class="social-icon " data-social="Facebook"><i class="fab fa-facebook"></i><span class="social-name">Facebook</span></a>
+  <a href="https://www.facebook.com/profile.php?id=61559804274395" class="social-icon " data-social="Facebook"><i class="fab fa-facebook"></i><span class="social-name">Facebook</span></a>
   <a href="#" class="social-icon " data-social="Twitter"><i class="fab fa-twitter"></i><span class="social-name">Twitter</span></a>
   <a href="#" class="social-icon " data-social="LinkedIn"><i class="fab fa-linkedin"></i><span class="social-name">LinkedIn</span></a>
   <a href="#" class="social-icon " data-social="YouTube"><i class="fab fa-youtube"></i><span class="social-name">YouTube</span></a>
-  <a href="#" class="social-icon " data-social="TikTok"><i class="fab fa-tiktok"></i><span class="social-name">TikTok</span></a>
+  <a href="https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1" class="social-icon " data-social="TikTok"><i class="fab fa-tiktok"></i><span class="social-name">TikTok</span></a>
 </div>
 
     
@@ -741,7 +1201,7 @@ img {
             <img src="/static/images/decision-making_15763496.png">
             <div class="text-box">
               <h2>Core Competencies</h2>
-              <p>xpertise in innovative design and construction techniques.
+              <p>Expertise in innovative design and construction techniques.
                 Strong project management capabilities ensuring timely and cost-effective delivery.
                 </p>
                 <span class="left-container-arrow"></span>
@@ -779,59 +1239,83 @@ img {
                     </div>
                  </article>
                  {% endfor %}
+
+                 {% for member in team_members %}
+                 <article class="card__article">
+                    <img src="{{ member.photo_url }}" alt="{{ member.name }}" class="card__img999">
+     
+                    <div class="card__data">
+                       <p class="card__description">{{ member.job_title }}</p>
+                       <h2 class="card__title">{{ member.name }}</h2>
+                    </div>
+                 </article>
+                 {% endfor %}
+
+                 {% for member in team_members %}
+                 <article class="card__article">
+                    <img src="{{ member.photo_url }}" alt="{{ member.name }}" class="card__img999">
+     
+                    <div class="card__data">
+                       <p class="card__description">{{ member.job_title }}</p>
+                       <h2 class="card__title">{{ member.name }}</h2>
+                    </div>
+                 </article>
+                 {% endfor %}
+
+                 
               </div>
            </div>
         
 
-            <footer class="footer" id="footer">
-                <div class="container">
-                  <div class="row">
-                    <div class="footer-col">
-                      <h4>company</h4>
-                      <ul>
-                        <li><a href="#about">about us</a></li>
-                        <li><a href="#service">our services</a></li>
-                        <li><a href="product.html">produts</a></li>
-                        <li><a href="#portfolio">portfolio</a></li>
-                      </ul>
-                    </div>
-                    <div class="footer-col">
-                      <h4>Amco</h4>
-                      <ul>
-                        <li><a href="product.html">Our furniture </a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="blog.html">News</a></li>
-                        <li><a href="blog.html">Event</a></li>
-                        
-                      </ul>
-                    </div>
-                    <div class="footer-col">
-                      <h4>Contact</h4>
-                      <ul>
-                        <li><a href="#">email<br>
-                        nazrawigirma598@gmail.com</a></li>
-                        <li><a href="#">Location<br>
-                        Meskelflower infront of Dreamlinerhotel </a></li>
-                        <li><a href="#">phone <br/>
-                          091020304050</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="footer-col2">
-                      <h4>follow us</h4>
-                      <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="copy">
-                    Copyright 2024 © || NAMIK DEVELOPMENT
+           <footer class="footer" id="footer">
+            <div class="container">
+              <div class="row">
+                <div class="footer-col">
+                  <h4>company</h4>
+                  <ul>
+                    <li><a href="/about">about us</a></li>
+                    <li><a href="/">our services</a></li>
+                    <li><a href="/prod">produts</a></li>
+                    <li><a href="/">portfolio</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Amco</h4>
+                  <ul>
+                    <li><a href="/prod">Our furniture </a></li>
+                    <li><a href="/c">Blog</a></li>
+                    <li><a href="c.html">News</a></li>
+                    <li><a href="blog.html">Event</a></li>
+                    
+                  </ul>
+                </div>
+                <div class="footer-col">
+                  <h4>Contact</h4>
+                  <ul>
+                    <li><a href="#">email<br>
+                    nazrawigirma598@gmail.com</a></li>
+                    <li><a href="#">Location<br>
+                    Meskelflower infront of Dreamlinerhotel </a></li>
+                    <li><a href="#">phone <br/>
+                      091020304050</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer-col2">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                   </div>
                 </div>
-             </footer>
+              </div>
+              <div class="copy">
+                Copyright 2024 © || NAMIK DEVELOPMENT
+              </div>
+            </div>
+         </footer>
             
         <!--
     <a href="{{ url_for('team') }}">Team</a>
@@ -976,7 +1460,34 @@ img {
           showSlide(slideIndex + 1);
       }, 3000);
       
-      
+      /*socialmedia */
+  document.addEventListener('DOMContentLoaded', function() {
+    const socialIcons = document.querySelectorAll('.social-icon');
+    
+    socialIcons.forEach(icon => {
+      icon.addEventListener('click', function(event) {
+        event.preventDefault();
+        const socialName = icon.getAttribute('data-social');
+        const socialUrl = getSocialUrl(socialName);
+        window.open(socialUrl, '_blank');
+      });
+    });
+    
+    function getSocialUrl(socialName) {
+      // Define your social media URLs
+      const socialUrls = {
+        'Telegram': 'https://telegram.org/',
+        'Instagram': 'https://www.instagram.com/',
+        'Facebook': 'https://www.facebook.com/profile.php?id=61559804274395',
+        'Twitter': 'https://twitter.com/',
+        'LinkedIn': 'https://www.linkedin.com/',
+        'YouTube': 'https://www.youtube.com/',
+        'TikTok': 'https://www.tiktok.com/@amco_interiorfurniture?_t=8mXEfzKb4HV&_r=1'
+      };
+      return socialUrls[socialName];
+    }
+  });
+  
       // Function to start counting animation
       function startCountingAnimation(targetElement) {
           const startNumber = 1; // Start counting from 1
