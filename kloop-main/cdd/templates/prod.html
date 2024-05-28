@@ -16,18 +16,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
+   
         .title {
             font-size: xx-large;
-            padding: 20px 0;
+            text-align: center;
+        }
+        @media (min-width: 1156px) and (max-width: 1399px) {
+          .title {
+            font-size: xx-large;
             text-align: center;
         }
 
+      }
+      
+
         .listProduct .item img {
-            width: 90%;
-            filter: drop-shadow(0 50px 20px #0009);
-        }
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area */
+    filter: drop-shadow(0 50px 20px #0009);
+}
 
         .listProduct {
+          margin-top: 10px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
@@ -37,6 +48,10 @@
             background-color: #EEEEE6;
             padding: 20px;
             border-radius: 20px;
+            max-width: 80%;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
         }
 
         .listProduct .item:hover {
@@ -99,6 +114,7 @@
             font-size: x-large;
             letter-spacing: 7px;
             margin-bottom: 20px;
+            font-family: poppins, sans-serif;
         }
 
         .detail .buttons {
@@ -143,7 +159,65 @@
         .detail .description {
             font-weight: 300;
         }
+        
+        /* // ipad */
+        @media only screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(3, 2fr); /* Adjust number of columns */
+    }
+    .detail {
+        grid-template-columns: 1fr; /* Stack the detail sections */
+        text-align: center;
+    }
+    .detail .image img {
+        width: 100%;
+        height: auto; /* Adjust image height for smaller screens */
+    }
 
+  }
+/* mobile */
+@media only screen and (max-width: 768px) {
+  .listProduct {
+  
+    align-items: center;
+    justify-content: center;
+        grid-template-columns: .5fr; /* Adjust number of columns */
+    }
+    .detail .name {
+        font-size: x-large;
+        margin: 0;
+    }
+    .detail .buttons button {
+        font-size: small;
+    }
+    .detail .buttons {
+        justify-content: center;
+    }
+    .listProduct .item img {
+    width: 60%;
+    max-height: 150px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area */
+    filter: drop-shadow(0 50px 20px #0009);
+}
+}
+.name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #11474D;
+            margin-top: 10px;
+        }
+
+        .price {
+            font-size: 16px;
+            color: #11474D;
+            margin-top: 5px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
         
 
        
@@ -159,46 +233,43 @@
     <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
 </div>
   <!-- Header -->
-  <header class="header">
-    <nav>
-      <div class="logo-container">
-        <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+<header class="header" id="header">
+  <nav>
+    <div class="logo-container">
+      <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
     </div>
     <ul id="menuList">
       <li><a id="home" href="/">Home</a></li>
       <li class="dropdown">
-          <a class="dropbtn">About
-              <span class="fas fa-angle-down"></span>
-          </a>
-          <div class="dropdown-content">
-              <a id="home" href="/about">About Us</a>
-              <a id="home" href="/">Portfolio</a>
-          </div>
+        <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+          <span class="fas fa-angle-down"></span>
+        </a>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a id="about" href="/about">About Us</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
       </li>
-      <li><a id="home" href="/">Service</a></li>
+      <li><a href="#service">Service</a></li>
       <li><a id="products" href="/prod">Products</a></li>
-      <li><a  id="home" href="/">Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
       <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
       <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
-  </ul>
-      <div class="menu-icon">
-          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-      </div>
+    </ul>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
   </nav>
 </header>
-
- <!--call button-->
- <a href="https://www.instagram.com/">
-  <div class="call"> 
+<a href="tel:+1234567890">
+  <div class="call">
     <h2>Call Us</h2>
     <div class="phone">
-      <img src="/static/images/call.png">
+      <img src="/static/images/call.png" alt="Call Icon">
     </div>
     <div class="circle1"></div>
     <div class="circle2"></div>
   </div>
 </a>
-<!--call button-->
 
 <div class="social-widget">
   <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
@@ -216,10 +287,12 @@
         <div class="listProduct">
             {% for product in products %}
             <div class="item">
+              <div class="image">
                 <img src="{{ url_for('uploaded_file', filename=product.image) }}" alt="{{ product.name }}">
-                <div>{{ product.name }}</div>
-                <div>{{ product.price }}</div>
-                <div>{{ product.description }}</div>
+              </div>
+                <div class="name">{{ product.name }}</div>
+                <div class="price">{{ product.price }} Birr</div>
+                <div class="description">{{ product.description }}</div>
             </div>
             {% endfor %}
         </div>
@@ -822,6 +895,34 @@
     
 </script>
 </body>
+<script>
+  function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+    } else {
+      dropdown.style.display = "block";
+    }
+  }
+
+  function showDropdown() {
+    var dropdown = document.getElementById("dropdownMenu");
+    dropdown.style.display = "block";
+  }
+
+  // Hide dropdown when clicking outside
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.style.display === "block") {
+          openDropdown.style.display = "none";
+        }
+      }
+    }
+  }
+</script>
 </html>
 <!--
     <nav class="navbar navbar-default">

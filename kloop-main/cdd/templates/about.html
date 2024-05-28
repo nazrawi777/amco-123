@@ -31,6 +31,7 @@
         /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
 
+
 /*call us*/
 a{
   text-decoration: none;
@@ -43,11 +44,11 @@ a{
   background: #ffffff;
   position: relative;
   right: -1200px;
-  bottom: 74px;
+  bottom: 68px !important;
   border-radius: 25px;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: center;  /* Center vertically */
+  justify-content: space-between;  /* Space between elements */
   cursor: pointer;
   text-decoration: none;
   z-index: 30;
@@ -57,7 +58,7 @@ a{
   position: relative;
   font-size: 14px;
   left: 52px;
-  bottom: -7.7px;
+  bottom: -12.7px !important;
   color: lightgreen;
 }
 
@@ -126,9 +127,11 @@ a{
   /*change2*/
   nav ul li a{
     text-decoration: none;
-    color: #ffffff;
+    color: teal;
     font-size: 12px;
     position: relative;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     left: -10px;
     font-family: poppins, sans-serif;
   }
@@ -152,7 +155,7 @@ a{
     position: relative;
     font-size: 14px;
     left: 46px;
-    bottom: -8.3px;
+    bottom: -9.3px !important;
     color: lightgreen;
   }
   
@@ -228,17 +231,18 @@ a{
       left: -10px;
       font-family: poppins, sans-serif;
     }
+    
     .call {
       width: 110px;
       height: 41px;
       background: #ffffff;
       position: relative;
+      align-items: center;  /* Center vertically */
+      justify-content: space-between;  /* Space between elements */ 
       right: -140px;
-      bottom: 64px;
+      bottom: 70px;
       border-radius: 25px;
       display: flex;
-      align-items: start;
-      justify-content: start;
       cursor: pointer;
       text-decoration: none;
       z-index: 60;
@@ -248,7 +252,7 @@ a{
       position: relative;
       font-size: 14px;
       left: 48px;
-      bottom: -8.3px;
+      bottom: 1.3px !important;
       color: lightgreen;
     }
     
@@ -324,11 +328,11 @@ a{
   background: #ffffff;
   position: relative;
   right: -690px;
-  bottom: 74px;
+  bottom: 70px;
   border-radius: 25px;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: center;  /* Center vertically */
+  justify-content: space-between;  /* Space between elements */
   cursor: pointer;
   text-decoration: none;
   z-index: 60;
@@ -338,7 +342,7 @@ a{
   position: relative;
   font-size: 16px;
   left: 42px;
-  bottom: -6.3px;
+  bottom: .3px !important;
   color: lightgreen;
 }
 
@@ -410,14 +414,21 @@ a{
     background: #ffffff;
     position: relative;
     right: -795px;
-    bottom: 74px;
+    bottom: 70px;
     border-radius: 25px;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     cursor: pointer;
     text-decoration: none;
     z-index: 60;
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: .3px !important;
+    color: lightgreen;
   }
 }
 @media (min-width: 1048px) and (max-width: 1155px) {
@@ -427,26 +438,35 @@ a{
     background: #ffffff;
     position: relative;
     right: -905px;
-    bottom: 74px;
+    bottom: 68px;
     border-radius: 25px;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     cursor: pointer;
     text-decoration: none;
     z-index: 60;
   }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: .3px !important;
+    color: lightgreen;
+  }
 }
 
 
-@media (min-width: 1156px) and (max-width: 1399px) {
+@media (min-width: 1215px) and (max-width: 1399px) {
   .call {
     width: 110px;
     height: 41px;
     background: #ffffff;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     position: relative;
     right: -1100px;
-    bottom: 64px;
+    bottom: 78px;
     border-radius: 25px;
     display: flex;
     align-items: start;
@@ -454,8 +474,44 @@ a{
     cursor: pointer;
     text-decoration: none;
     z-index: 60;
+
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: -6.3px !important;
+    color: lightgreen;
   }
 }
+@media (min-width: 1156px) and (max-width: 1214px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    position: relative;
+    right: -980px;
+    bottom: 78px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: -5.3px !important;
+    color: lightgreen;
+  }
+}
+
 @media (max-width: 374){
 
   .call {
@@ -467,14 +523,15 @@ a{
     bottom: 34px;
     border-radius: 25px;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     cursor: pointer;
     text-decoration: none;
     z-index: 60;
   }
   
 }
+
 
 
 /*=============== VARIABLES CSS ===============*/
@@ -747,12 +804,12 @@ img {
 /* Mobile Styles (max-width: 600px) */
 @media (max-width: 600px) {
     .abtus {
-        padding: 1rem;
+        padding: 0cqb;
         width: 100%;
         line-height: 1.5;
     }
     .abtus p{
-        font-size: 12px;
+        font-size: 9px;
     }
 }
 
@@ -764,32 +821,38 @@ img {
         line-height: 1.5;
     }
     .abtus p{
-        font-size: 14px;
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+  .abtus p{
+        font-size: 20px;
     }
 }
 @media (min-width: 600px) and (max-width: 754px) {
     .abtus {
-        padding: 1rem;
-        width: 90%;
+        padding: 0rem;
+        width: 100%;
         line-height: 1.5;
     }
     .abtus p{
-        font-size: 12px;
+        font-size: 11px;
     }
 }
-@media (min-width: 360px) and (max-width: 430px) {
+@media (min-width: 360px) and (max-width: 440px) {
     .abtus {
         padding: 0rem;
         position: relative;
         bottom: 200px;
-        width: 90%;
+        width: 100%;
         line-height: 1;
     }
     .abtus h1{
         font-size: 20px;
     }
     .abtus p{
-        font-size: 6.2px;
+        font-size: 6px;
     }
 } 
 @media (min-width: 421px) and (max-width: 554px) {
@@ -797,11 +860,11 @@ img {
         padding: 0rem;
         position: relative;
         bottom: 200px;
-        width: 90%;
+        width: 100%;
         line-height: 1;
     }
     .abtus h1{
-        font-size: 20px;
+        font-size: 18px;
     }
     .abtus p{
         font-size: 7.3px;
@@ -809,16 +872,16 @@ img {
 } 
 
 /* PC Styles (min-width: 901px) */
-@media (min-width: 901px) {
+@media (min-width: 905px) and (max-width: 1199px) {
     .abtus {
         padding: 1rem;
-        width: 80%;
+        width: 100%;
         line-height: 1.5;
         text-align: center;
         
     }
     .abtus p{
-        font-size: 20px;
+        font-size: 13px;
     }
 }    
 .Meet{
@@ -1078,46 +1141,44 @@ img {
     <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
 </div>
   <!-- Header -->
-  <header class="header" id>
+  <header class="header" id="header">
     <nav>
       <div class="logo-container">
         <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
-    </div>
-    <ul id="menuList">
-      <li><a id="home" href="/">Home</a></li>
-      <li class="dropdown">
-          <a class="dropbtn">About
-              <span class="fas fa-angle-down"></span>
+      </div>
+      <ul id="menuList">
+        <li><a id="home" href="/">Home</a></li>
+        <li class="dropdown">
+          <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+            <span class="fas fa-angle-down"></span>
           </a>
-          <div class="dropdown-content">
-              <a id="about" href="/about">About Us</a>
-              <a id="home" href="/">Portfolio</a>
+          <div class="dropdown-content" id="dropdownMenu">
+            <a id="about" href="/about">About Us</a>
+            <a href="#portfolio">Portfolio</a>
           </div>
-      </li>
-      <li><a id="home" href="/">Service</a></li>
-      <li><a id="home" href="/prod">Products</a></li>
-      <li><a id="home" href="/">Contact</a></li>
-      <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
-      <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
-  </ul>
-  <div class="menu-icon">
-    <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-</div>
-  </nav>
-</header>
+        </li>
+        <li><a href="#service">Service</a></li>
+        <li><a id="products" href="/prod">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+        <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
+      </ul>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+      </div>
+    </nav>
+  </header>
 
- <!--call button-->
- <a href="https://www.instagram.com/">
-  <div class="call"> 
-    <h2>Call Us</h2>
-    <div class="phone">
-      <img src="/static/images/call.png">
+  <a href="tel:+1234567890">
+    <div class="call">
+      <h2>Call Us</h2>
+      <div class="phone">
+        <img src="/static/images/call.png" alt="Call Icon">
+      </div>
+      <div class="circle1"></div>
+      <div class="circle2"></div>
     </div>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-  </div>
-</a>
-<!--call button-->
+  </a>
 
 <div class="social-widget">
   <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
@@ -1859,7 +1920,34 @@ img {
     
       </body>
     
-      
+      <script>
+        function toggleDropdown() {
+          var dropdown = document.getElementById("dropdownMenu");
+          if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+          } else {
+            dropdown.style.display = "block";
+          }
+        }
+    
+        function showDropdown() {
+          var dropdown = document.getElementById("dropdownMenu");
+          dropdown.style.display = "block";
+        }
+    
+        // Hide dropdown when clicking outside
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+              }
+            }
+          }
+        }
+      </script>
     </html>
     
     

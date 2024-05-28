@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Job Vacancy Website - Add Job</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMCO</title>
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <style>
     body {
       background: white;
@@ -83,29 +94,46 @@
     }
   </style>
 </head>
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <img src="path/to/your/AMCO.png" alt="Logo" height="30">
+<body >
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body class="vacancy-page">
+  <div class="arrow">
+    <a href="#menuList" title="Back to Top"><span class="fas fa-angle-up"></span></a>
+  </div>
+  <div class="arrow1">
+    <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
+</div>
+<!-- Header -->
+<header class="header" id="header">
+  <nav>
+    <div class="logo-container">
+      <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+    </div>
+    <ul id="menuList">
+      <li><a id="home" href="/">Home</a></li>
+      <li class="dropdown">
+        <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+          <span class="fas fa-angle-down"></span>
         </a>
-      </div>
-      <div class="navbar-center">
-        <ul class="nav navbar-nav">
-          <li><a href="/home">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="/prod">Products</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="/">Vacancy</a></li>
-        </ul>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
-      </ul>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a id="about" href="/about">About Us</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
+      </li>
+      <li><a href="#service">Service</a></li>
+      <li><a id="products" href="/prod">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+      <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
+    </ul>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
     </div>
   </nav>
+</header>
+
+
 
   <h1>Add Job</h1>
 
@@ -125,4 +153,32 @@
     <button type="submit">Add Job</button>
   </form>
 </body>
+<!-- Header -->
+<header class="header" id="header">
+  <nav>
+    <div class="logo-container">
+      <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+    </div>
+    <ul id="menuList">
+      <li><a id="home" href="/">Home</a></li>
+      <li class="dropdown">
+        <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+          <span class="fas fa-angle-down"></span>
+        </a>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a id="about" href="/about">About Us</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
+      </li>
+      <li><a href="#service">Service</a></li>
+      <li><a id="products" href="/prod">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+      <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
+    </ul>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
+  </nav>
+</header>
 </html>

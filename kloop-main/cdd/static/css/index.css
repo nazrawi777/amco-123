@@ -59,7 +59,7 @@ html,body
 .social-widget {
   font-family: poppins, sans-serif;
   position: fixed;
-  top: 60%;
+  top: 60% !important;
   width: 40px;
   left: 20px; /* Adjust the left distance as needed */
   transform: translateY(-50%);
@@ -732,7 +732,7 @@ html,body
 
 
   
-  @media (min-width: 773px) and (max-width: 991px) {
+  @media (min-width: 773px) and (max-width: 964px) {
   /*our team*/
   /*project*/
   .dot-container1 {
@@ -746,7 +746,7 @@ html,body
   .social-widget {
     font-family: poppins, sans-serif;
     position: fixed;
-    top: 35%;
+    top: 40%;
     width: 40px;
     left: 20px; /* Adjust the left distance as needed */
     transform: translateY(-50%);
@@ -949,6 +949,18 @@ html,body
     font-size: 19px;
   }
 
+  @media (min-width: 965px) and (max-width: 1163px) {
+
+  .social-widget {
+    font-family: poppins, sans-serif;
+    position: fixed;
+    top: 40% ;
+    width: 40px;
+    left: 20px; /* Adjust the left distance as needed */
+    transform: translateY(-50%);
+    z-index: 90;
+  }
+}
 
 
   @media (min-width: 576px) and (max-width: 772px) {
@@ -975,7 +987,7 @@ html,body
     .social-widget {
       font-family: poppins, sans-serif;
       position: fixed;
-      top: 28%;
+      top: 40%;
       width: 40px;
       left: 20px; /* Adjust the left distance as needed */
       transform: translateY(-50%);
@@ -1185,11 +1197,19 @@ html,body
       .social-widget {
         font-family: poppins, sans-serif;
         position: fixed;
-        top: 38%;
-        width: 30px;
+        top: 43%;
+        width: 20px;
         left: 20px; /* Adjust the left distance as needed */
         transform: translateY(-50%);
         z-index: 90;
+      }
+      .social-icon {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 2px;
+        right: 10px;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
       }
       .dot3 {
         width: 30px;
@@ -1839,8 +1859,8 @@ a{
   bottom: 74px;
   border-radius: 25px;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: center;  /* Center vertically */
+  justify-content: space-between;  /* Space between elements */
   cursor: pointer;
   text-decoration: none;
   z-index: 30;
@@ -1922,6 +1942,8 @@ a{
     color: teal;
     font-size: 12px;
     position: relative;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     left: -10px;
     font-family: poppins, sans-serif;
   }
@@ -2021,17 +2043,18 @@ a{
       left: -10px;
       font-family: poppins, sans-serif;
     }
+    
     .call {
       width: 110px;
       height: 41px;
       background: #ffffff;
       position: relative;
+      align-items: center;  /* Center vertically */
+      justify-content: space-between;  /* Space between elements */ 
       right: -140px;
       bottom: 74px;
       border-radius: 25px;
       display: flex;
-      align-items: start;
-      justify-content: start;
       cursor: pointer;
       text-decoration: none;
       z-index: 60;
@@ -2120,8 +2143,8 @@ a{
   bottom: 74px;
   border-radius: 25px;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: center;  /* Center vertically */
+  justify-content: space-between;  /* Space between elements */
   cursor: pointer;
   text-decoration: none;
   z-index: 60;
@@ -2131,7 +2154,7 @@ a{
   position: relative;
   font-size: 16px;
   left: 42px;
-  bottom: -6.3px;
+  bottom: -1.3px;
   color: lightgreen;
 }
 
@@ -2206,11 +2229,18 @@ a{
     bottom: 74px;
     border-radius: 25px;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     cursor: pointer;
     text-decoration: none;
     z-index: 60;
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: 1.3px;
+    color: lightgreen;
   }
 }
 @media (min-width: 1048px) and (max-width: 1155px) {
@@ -2220,7 +2250,35 @@ a{
     background: #ffffff;
     position: relative;
     right: -905px;
-    bottom: 74px;
+    bottom: 68px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: 1.3px;
+    color: lightgreen;
+  }
+}
+
+
+@media (min-width: 1215px) and (max-width: 1399px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    position: relative;
+    right: -1100px;
+    bottom: 78px;
     border-radius: 25px;
     display: flex;
     align-items: start;
@@ -2228,18 +2286,26 @@ a{
     cursor: pointer;
     text-decoration: none;
     z-index: 60;
+
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: 1.3px;
+    color: lightgreen;
   }
 }
-
-
-@media (min-width: 1156px) and (max-width: 1399px) {
+@media (min-width: 1156px) and (max-width: 1214px) {
   .call {
     width: 110px;
     height: 41px;
     background: #ffffff;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     position: relative;
-    right: -1130px;
-    bottom: 74px;
+    right: -980px;
+    bottom: 78px;
     border-radius: 25px;
     display: flex;
     align-items: start;
@@ -2269,8 +2335,8 @@ a{
     bottom: 34px;
     border-radius: 25px;
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
     cursor: pointer;
     text-decoration: none;
     z-index: 60;
@@ -3163,6 +3229,7 @@ i#next {
   background-color: transparent;
   min-width: 160px;
   z-index: 1;
+  cursor: pointer;
 }
 
 /* Links inside the dropdown */
@@ -3173,6 +3240,7 @@ i#next {
   display: block;
   text-align: left;
   z-index: 999;
+  cursor: pointer;
 }
 
 /* Change color of dropdown links on hover */
@@ -4433,10 +4501,10 @@ iframe {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%; /* Adjust this width if you add more slides */
-   gap: 50px;
+   gap: 20px !important;
    position: relative;
    top: 330px;
-   margin-left: 20px;
+   margin-right: 50px !important;
   }
   
   .slide21 {
@@ -4573,7 +4641,15 @@ iframe {
     flex-wrap: wrap;
     margin: 0;
   }
-  
+  .slides22 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Adjust this width if you add more slides */
+   gap: 20px !important;
+   position: relative;
+   top: 330px;
+   margin-left: 50px !important;
+  }
   
   .portfolio-image {
     width: 150px;
@@ -4598,10 +4674,10 @@ iframe {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%; /* Adjust this width if you add more slides */
-   gap: 0px;
+   gap: 20px !important;
    position: relative;
    top: 330px;
-   margin-left: 20px;
+   margin-left: 50px !important;
   }
   .custom-slider-container11 {
     position: relative;
@@ -4870,12 +4946,12 @@ iframe {
   .slides22 {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 100%;
-    gap: 25px !important;
+    width: 70%;
+    gap: 15px !important;
     height: 200px;
-    position: relative;
+    position: relative !important;
     top: 30px;
-    margin-left: 20px;
+    right: 60px !important;
     background-color: white !important;
 }
   .scroll img {
@@ -4930,11 +5006,11 @@ iframe {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
-    gap: 25px !important;
+    gap: 15px !important;
     height: 200px;
     position: relative;
     top: 30px;
-    margin-left: 20px;
+    right: 60px !important;
 }
   .scroll img {
     width: 100px;
@@ -5786,11 +5862,12 @@ iframe {
         .slides22 {
           display: flex;
           transition: transform 0.5s ease-in-out;
-          width: 100%;
-          gap: 30px !important;
-          position: relative;
+          width: 70%;
+          height: 200px;
+          gap: 20px !important;
+          position: relative !important;
           top: 30px;
-          margin-left: 20px;
+        right: 60px !important;
       }
         .ourpro{
           font: bold;
@@ -11561,7 +11638,7 @@ body.contact-page #contact {
 
 /* Vacancy page active link */
 body.vacancy-page #vacancy {
-  color: red; /* Active color for Vacancy link */
+  color: black; /* Active color for Vacancy link */
   font-weight: bold;
 }
 

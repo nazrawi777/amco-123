@@ -11530,34 +11530,34 @@ body.vacancy-page #vacancy {
     </style>
 </head>
 <body>
-    <header class="header" id="blog1">
-        <nav>
-          <div class="logo-container">
-            <a href="/"><img src="/kloop-main/cdd/static/images/logo.png" alt="Your Logo" class="logo"></a>
+    <!-- Header -->
+<header class="header" id="header">
+  <nav>
+    <div class="logo-container">
+      <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+    </div>
+    <ul id="menuList">
+      <li><a id="home" href="/">Home</a></li>
+      <li class="dropdown">
+        <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+          <span class="fas fa-angle-down"></span>
+        </a>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a id="about" href="/about">About Us</a>
+          <a href="#portfolio">Portfolio</a>
         </div>
-        <ul id="menuList">
-          <li><a id="home" href="/">Home</a></li>
-          <li class="dropdown">
-              <a class="dropbtn">About
-                  <span class="fas fa-angle-down"></span>
-              </a>
-              <div class="dropdown-content">
-                  <a id="about" href="/about">About Us</a>
-                  <a  href="#portfolio">Portfolio</a>
-              </div>
-          </li>
-          <li><a href="#service">Service</a></li>
-          <li><a id="products" href="/prod">Products</a></li>
-          <li><a  href="#contact">Contact</a></li>
-          <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
-          <li><a id="login" href="/lagin"><i class="fas fa-user"></i></a></li>
-      </ul>
-          <div class="menu-icon">
-              <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-          </div>
-      </nav>
-    
-    </header>
+      </li>
+      <li><a href="#service">Service</a></li>
+      <li><a id="products" href="/prod">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
+      <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
+    </ul>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
+  </nav>
+</header>
 
     <div class="container">
         <h1>Job Management</h1>
@@ -12104,5 +12104,32 @@ body.vacancy-page #vacancy {
     
       </body>
     
+      <script>
+        function toggleDropdown() {
+          var dropdown = document.getElementById("dropdownMenu");
+          if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+          } else {
+            dropdown.style.display = "block";
+          }
+        }
       
+        function showDropdown() {
+          var dropdown = document.getElementById("dropdownMenu");
+          dropdown.style.display = "block";
+        }
+      
+        // Hide dropdown when clicking outside
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+              }
+            }
+          }
+        }
+      </script>
     </html>

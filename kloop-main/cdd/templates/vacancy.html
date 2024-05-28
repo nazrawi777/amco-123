@@ -26,7 +26,513 @@ html,body
 }
 
 
+/*call us*/
+a{
+  text-decoration: none;
+}
 
+/*change2*/
+.call {
+  max-width: 120px;
+  height: 40px;
+  background: #ffffff;
+  position: relative;
+  right: -1200px;
+  bottom: 74px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;  /* Center vertically */
+  justify-content: space-between;  /* Space between elements */
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 30;
+}
+
+.call h2 {
+  position: relative;
+  font-size: 14px;
+  left: 52px;
+  bottom: 7.7px !important;
+  color: lightgreen;
+}
+
+.circle1,
+.circle2 {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  animation: animate1 2.5s linear infinite;
+}
+
+.circle2 {
+  animation: animate2 2.5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+.phone {
+  width: 60px;
+  height: 44px;
+  position: absolute;
+  z-index: 5;
+}
+
+.phone img {
+  width: 80%;
+}
+
+@media (min-width: 501px) and (max-width: 819px) {
+  /*change2*/
+  nav ul li a{
+    text-decoration: none;
+    color: teal;
+    font-size: 12px;
+    position: relative;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    left: -10px;
+    font-family: poppins, sans-serif;
+  }
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    position: relative;
+    right: -320px;
+    bottom: 74px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  
+  .call h2 {
+    position: relative;
+    font-size: 14px;
+    left: 46px;
+    bottom: -.3px;
+    color: lightgreen;
+  }
+  
+  .circle1,
+  .circle2 {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .circle1 {
+    animation: animate1 2.5s linear infinite;
+  }
+  
+  .circle2 {
+    animation: animate2 2.5s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% {
+      width: 25px;
+      height: 25px;
+      background-color: rgb(36, 167, 64);
+      top: 10px;
+      left: 7px;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(134, 78, 13, 0);
+      top: -2px;
+      left: 5px;
+    }
+  }
+  
+  @keyframes animate2 {
+    0% {
+      width: 25px;
+      height: 25px;
+      background-color: rgb(36, 167, 64);
+      top: 10px;
+      left: 7px;
+    }
+    100% {
+      width: 50px;
+      height: 50px;
+      background-color: rgba(134, 78, 13, 0);
+      top: -2px;
+      left: 5px;
+    }
+  }
+  
+  .phone {
+    width: 60px;
+    height: 44px;
+    position: absolute;
+    z-index: 5;
+  }
+  
+  .phone img {
+    width: 80%;
+  }
+  }
+
+  @media (min-width: 360px) and (max-width: 501px) {
+    /*change2*/
+    nav ul li a{
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 12px;
+      position: relative;
+      left: -10px;
+      font-family: poppins, sans-serif;
+    }
+    
+    .call {
+      width: 110px;
+      height: 41px;
+      background: #ffffff;
+      position: relative;
+      align-items: center;  /* Center vertically */
+      justify-content: space-between;  /* Space between elements */ 
+      right: -140px;
+      bottom: 74px;
+      border-radius: 25px;
+      display: flex;
+      cursor: pointer;
+      text-decoration: none;
+      z-index: 60;
+    }
+    
+    .call h2 {
+      position: relative;
+      font-size: 14px;
+      left: 48px;
+      bottom: -.3px;
+      color: lightgreen;
+    }
+    
+    .circle1,
+    .circle2 {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      position: absolute;
+    }
+    
+    .circle1 {
+      animation: animate1 2.5s linear infinite;
+    }
+    
+    .circle2 {
+      animation: animate2 2.5s linear infinite;
+    }
+    
+    @keyframes animate1 {
+      0% {
+        width: 25px;
+        height: 25px;
+        background-color: rgb(36, 167, 64);
+        top: 10px;
+        left: 7px;
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(134, 78, 13, 0);
+        top: -2px;
+        left: 5px;
+      }
+    }
+    
+    @keyframes animate2 {
+      0% {
+        width: 25px;
+        height: 25px;
+        background-color: rgb(36, 167, 64);
+        top: 10px;
+        left: 7px;
+      }
+      100% {
+        width: 50px;
+        height: 50px;
+        background-color: rgba(134, 78, 13, 0);
+        top: -2px;
+        left: 5px;
+      }
+    }
+    
+    .phone {
+      width: 60px;
+      height: 44px;
+      position: absolute;
+      z-index: 5;
+    }
+    
+    .phone img {
+      width: 80%;
+    }
+    }
+
+
+
+@media (min-width: 820px) and (max-width: 930px) {
+/*change2*/
+.call {
+  width: 110px;
+  height: 41px;
+  background: #ffffff;
+  position: relative;
+  right: -690px;
+  bottom: 74px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;  /* Center vertically */
+  justify-content: space-between;  /* Space between elements */
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 60;
+}
+
+.call h2 {
+  position: relative;
+  font-size: 16px;
+  left: 42px;
+  bottom: -1.3px;
+  color: lightgreen;
+}
+
+.circle1,
+.circle2 {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  animation: animate1 2.5s linear infinite;
+}
+
+.circle2 {
+  animation: animate2 2.5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(36, 167, 64);
+    top: 10px;
+    left: 7px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(134, 78, 13, 0);
+    top: -2px;
+    left: 5px;
+  }
+}
+
+.phone {
+  width: 60px;
+  height: 44px;
+  position: absolute;
+  z-index: 5;
+}
+
+.phone img {
+  width: 80%;
+}
+}
+@media (min-width: 931px) and (max-width: 1048px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    position: relative;
+    right: -795px;
+    bottom: 74px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: 1.3px;
+    color: lightgreen;
+  }
+}
+@media (min-width: 1048px) and (max-width: 1155px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    position: relative;
+    right: -905px;
+    bottom: 75px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: 1.3px;
+    color: lightgreen;
+  }
+}
+
+
+@media (min-width: 1215px) and (max-width: 1399px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    position: relative;
+    right: -1100px;
+    bottom: 78px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: 1.3px;
+    color: lightgreen;
+  }
+}
+@media (min-width: 1156px) and (max-width: 1214px) {
+  .call {
+    width: 110px;
+    height: 41px;
+    background: #ffffff;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    position: relative;
+    right: -980px;
+    bottom: 78px;
+    border-radius: 25px;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+
+  }
+  .call h2 {
+    position: relative;
+    font-size: 16px;
+    left: 42px;
+    bottom: 4.3px;
+    color: lightgreen;
+  }
+  h2{
+    position: relative;
+    left: 100px;
+  }
+  .job{
+    position: relative;
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 374){
+
+  .call {
+    width: 80px;
+    height: 43px;
+    background: #ffffff;
+    position: relative;
+    right: -20px;
+    bottom: 34px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;  /* Center vertically */
+    justify-content: space-between;  /* Space between elements */
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 60;
+  }
+  
+}
         .container {
             margin-top: 20px;
         }
@@ -39,6 +545,9 @@ html,body
         h2{
           font-weight: 100;
           font-family: poppins, sans-serif;
+          position: relative;
+          left: 100px;
+
         }
         form {
             max-width: 400px;
@@ -111,7 +620,8 @@ html,body
         }
         .job {
             margin-top: 20px;
-            padding: 20px;
+            padding: 10px;
+            padding-left: 100px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -131,45 +641,44 @@ html,body
     <a href="#footer" title="Scroll to Bottom" onclick="scrollToBottom()"><span class="fas fa-angle-down"></span></a>
 </div>
   <!-- Header -->
-  <header class="header" id="header">
-    <nav>
-      <div class="logo-container">
-        <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
+<header class="header" id="header">
+  <nav>
+    <div class="logo-container">
+      <a href="/"><img src="/static/images/logo.png" alt="Your Logo" class="logo"></a>
     </div>
     <ul id="menuList">
       <li><a id="home" href="/">Home</a></li>
       <li class="dropdown">
-          <a class="dropbtn">About
-              <span class="fas fa-angle-down"></span>
-          </a>
-          <div class="dropdown-content">
-              <a id="about" href="/about">About Us</a>
-              <a id="home" href="/">Portfolio</a>
-          </div>
+        <a class="dropbtn" href="#" onclick="toggleDropdown()" onmouseover="showDropdown()">About
+          <span class="fas fa-angle-down"></span>
+        </a>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a id="about" href="/about">About Us</a>
+          <a href="#portfolio">Portfolio</a>
+        </div>
       </li>
-      <li><a id="home" href="/">Service</a></li>
-      <li><a id="home" href="/prod">Products</a></li>
-      <li><a id="home" href="/">Contact</a></li>
+      <li><a href="#service">Service</a></li>
+      <li><a id="products" href="/prod">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
       <li><a id="vacancy" href="/vacancy">Vacancy</a></li>
       <li><a id="login" href="sagin"><i class="fas fa-user"></i></a></li>
-  </ul>
-  <div class="menu-icon">
-    <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
-</div>
+    </ul>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+    </div>
   </nav>
 </header>
 
- <a href="https://www.instagram.com/">
-  <div class="call"> 
+<a href="tel:+1234567890">
+  <div class="call">
     <h2>Call Us</h2>
     <div class="phone">
-      <img src="/static/images/call.png">
+      <img src="/static/images/call.png" alt="Call Icon">
     </div>
     <div class="circle1"></div>
     <div class="circle2"></div>
   </div>
 </a>
-<!--call button-->
 
 <div class="social-widget">
   <a href="#" class="social-icon " data-social="Telegram"><i class="fab fa-telegram"></i><span class="social-name">Telegram</span></a>
@@ -760,7 +1269,34 @@ html,body
   </script>
   
     </body>
-  
+    <script>
+      function toggleDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+        } else {
+          dropdown.style.display = "block";
+        }
+      }
+    
+      function showDropdown() {
+        var dropdown = document.getElementById("dropdownMenu");
+        dropdown.style.display = "block";
+      }
+    
+      // Hide dropdown when clicking outside
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+              openDropdown.style.display = "none";
+            }
+          }
+        }
+      }
+    </script>
     
   </html>
   
